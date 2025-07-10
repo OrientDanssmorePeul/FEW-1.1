@@ -1,0 +1,33 @@
+h4 {
+    color: red;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Element (tag)  */
+/* Class Selectors (.) */
+/* ID Selecters (#) (exmp: for id="main-title")*/
+
+p{
+    color:blue;
+    font-size: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.highlight{
+    background-color: lightblue;
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#main-title {
+    color: purple;
+    font-size: 30px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
