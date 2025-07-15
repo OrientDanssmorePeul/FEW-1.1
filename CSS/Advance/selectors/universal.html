@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Selectors 2</title>
+        <style>
+            *{                      /*sets everything to that property value[*]*/
+                font-size: 25px;  
+            }
+            .container p{           /*decesdants*/
+                color: red;
+            }
+            .container > p{         /*child of container*/
+                font-weight: bold;
+            }
+
+            .container > p + p{
+                font-style: italic;
+            }                /* move onto the next element */
+
+            a[href*="https://en.wikipedia.org/wiki/D"]{     
+                color: green;
+                text-decoration: underline;
+            }
+            img[alt^="A Cute Cat"]{
+                border: 1px solid black;
+                box-shadow: 2px 2px 5px gray;
+            }
+            input[type="text"] {
+                border: 1px solid black;
+            }
+            input[placeholder$="name"]{
+                font-style: italic;
+            }
+            button:hover {
+                background-color: blue;
+                color: white;
+            }
+            button:active{
+                background-color: red;
+                color: white;
+            }
+            input:focus {
+                border: 2px solid blue;
+            }
+            p::before/*after, Pseudo Elements*/{
+                content: "Before the text: ";
+                font-weight: bold;
+            }
+            ul li:first-child{
+                font-weight: bold;
+            }
+            ul li:last-child{
+                color: red;
+            }
+            h2:first-of-type{
+                color: blue;
+            }
+            ul li:nth-child(2n){
+                background-color: lightgray;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Selectors</h1>
+            <p>This is sentence</p>
+            <p>This is sentence</p>
+            <p>This is sentence</p>
+            <div>
+                <p>3</p>                
+                <p>This is sentence</p>
+                <a href="https://en.wikipedia.org/wiki/D">Click Me</a><br>
+                <img src="data:image/png;base64,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"
+                    alt="A Cute Cat"><br>
+                <input type="text" placeholder="name"><br>
+            </div>
+        </div>
+        <input type="text" placeholder="Enter Your Name">
+        <br />
+        <button>Submit</button>
+        <br>
+        <br>
+        <br>
+        <h2>Advanced Elements Selectors</h2>
+        <ul>
+            <li>First item</li>
+            <li>Second Item</li>
+            <li>Third Item</li>
+            <li>Fourth Item</li>
+        </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
