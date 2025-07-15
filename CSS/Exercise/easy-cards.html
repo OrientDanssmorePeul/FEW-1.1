@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Content Cards</title>
+        <style>
+            .container div{
+                width: 200px;
+                height: 200px;
+            }
+            .container{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .cards{
+                width: 100%;
+                background-color: #ffffff; /* Sets the background color of the card */
+                border:1px solid #ddd; /* Adds a border to the container */
+                overflow: hidden; /* Ensures that the content does not overflow the container */
+                text-align: center;
+                margin-top: 50px;
+                padding: 20px;
+                
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Easy Exercise: Content Cards</h1>
+        <div class="container">
+                
+                <div style="margin-right: 20px;" class="cards"><h2>Card 1</h2><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+
+
+                <div class="cards"><h2>Card 2</h2><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+
+                <div style="margin-left: 20px;" class="cards"><h2>Card 3</h2><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+                
+        </div>
+    </body>
+</html>
