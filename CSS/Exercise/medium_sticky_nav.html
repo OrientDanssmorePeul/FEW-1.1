@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sticky Navigation Exercise</title>
+    <!-- Load your css file here -->
+     <style>
+        li{
+            list-style: none;
+        }
+        a:hover{
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+        }
+        header{
+            background-color: rgb(48, 161, 199);
+            padding: 50px;
+            text-align: center;
+            color: white;
+        }
+        .sticky-nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: aquamarine;
+            position: sticky;
+            top: 0px;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 500px;
+        }
+        .content-section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            font-size: 40px;
+        }
+        #section1{
+            margin: auto;
+            height: 100vh;
+            background-color: lightgray;
+            padding: 20px;
+        }
+        #section2{
+            margin: auto;
+            min-height: 100vh;
+            background-color: gray;
+            padding: 20px;
+        }
+        #section3{
+            margin: auto;
+            height: 100vh;
+            background-color: cyan;
+            padding: 20px;
+        }
+        footer{
+            background-color: rgb(48, 161, 199);
+            padding: 50px;
+            text-align: center;
+            color: white;
+        }
+     </style>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif;margin: 0px;">
+    <header>
+        <h1>Website Title</h1>
+    </header>
+    
+    <nav class="sticky-nav">
+        <ul>
+            <li><a style="text-decoration: none;" href="#section1">Section 1</a></li>
+            <li><a style="text-decoration: none;" href="#section2">Section 2</a></li>
+            <li><a style="text-decoration: none;" href="#section3">Section 3</a></li>
+        </ul>
+    </nav>
+    
+    <section id="section1" class="content-section">
+            <h2>Section 1</h2><hr style="border: 1px solid black; height: 1px; margin: 20px ;">
+            <p>Content for section 1...</p>
+    </section>
+    <section id="section2" class="content-section">
+        <h2>Section 2</h2><hr style="border: 1px solid black; height: 1px; margin: 20px ;">
+        <p>Content for section 2...</p>
+    </section>
+    <section id="section3" class="content-section">
+        <h2>Section 3</h2><hr style="border: 1px solid black; height: 1px; margin: 20px ;">
+        <p>Content for section 3...</p>
+    </section>
+    <footer>
+        <p>Footer content</p>
+    </footer>
+</body>
+</html>

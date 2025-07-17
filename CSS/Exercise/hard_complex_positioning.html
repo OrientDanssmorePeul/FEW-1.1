@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Complex Positioning Layout</title>
+        <style>
+            li{
+                list-style: none;
+            }
+            a{
+                text-decoration: none;
+            }
+            .Header{
+                background-color: antiquewhite;
+                height: auto;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+            .Header ul{
+                font-size: 20px;
+                padding: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 50px;
+                padding-right: 50px;
+            }
+            .Flexbox{
+                width: 100vw;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .Sidebar{
+                background-color: burlywood;
+                position: sticky;
+                top: 0px;
+                margin: 20px;
+                padding: 20px;
+                border-radius: 5px;
+                width: 20%;
+                height: 20%; 
+            }
+            .Sidebar ul{
+                padding: 0px;
+                margin: 0px;
+            }
+            .Sidebar ul li{
+                padding: 10px;
+            }
+            .Sidebar h1{
+                padding-left: 10px;
+            }
+            .Sidebar hr{
+                margin: 10px;
+            }
+            .MainContent{
+                background-color: burlywood;
+                margin: 20px;
+                padding: 20px;
+                border-radius: 5px;
+                width: 100%;
+            }
+            .Container{
+                background-color: gray;
+                border: 1px solid white;
+                border-radius: 10px;
+                height: 600px;
+                margin: 20px;
+
+            }
+            .Box{
+                border-radius: 10px;
+                height: 200px;
+                width: 200px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                
+            }
+            .box1{
+                background-color: red;
+                position: absolute;
+                z-index: 1;
+                bottom: 200px;
+                right: 600px;
+            }
+            .box2{
+                background-color: blue;
+                position: absolute;                
+                z-index: 2;
+                bottom: 110px;
+                right: 510px;
+            }
+            .box3{
+                background-color: green;
+                position: absolute;                
+                z-index: 3;
+                bottom: 25px;
+                right: 420px;               
+            }
+            .floating-button{
+                background-color: aqua;
+                border: 0px solid;
+                color: aliceblue;
+                font-size: 50px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                border-radius: 100%;
+                width: 75px;
+                height: 75px;
+                left: 1400px;
+                bottom: 0px;
+                z-index: 999;
+            }
+            .container {
+                height: 2000px;
+                padding: 50px;
+            }
+            footer{
+                background-color: antiquewhite;
+                height: auto;
+                width: 100%;
+                text-align: center; 
+                padding: 60px 0px 60px;               
+            }
+        </style>
+    </head>
+    <body style="margin: 0px; font-family: Arial, Helvetica, sans-serif;">
+
+
+    
+    <div class="Header">
+        <h1 style="padding-left: 20px;">Site Logo</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>              
+        </div>
+
+
+    <div class="Flexbox">
+        <aside class="Sidebar">
+        <h1>Sidebar</h1>
+        <hr>
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+        </ul>
+        </aside>
+
+
+
+        <div class="MainContent">
+            <h1>Main Content</h1>
+            <div class="Container">
+                <div class="Box box1">Box 1</div>
+                <div class="Box box2">Box 2</div>
+                <div class="Box box3">Box 3</div>
+            </div>
+            <p>This is additional content to create scrolling.</p>
+			<p>This is additional content to create scrolling.</p>
+		    <p>This is additional content to create scrolling.</p>
+			<p>This is additional content to create scrolling.</p>
+			<p>This is additional content to create scrolling.</p>
+			<p>This is additional content to create scrolling.</p>
+			<p>This is additional content to create scrolling.</p>
+			<p>This is additional content to create scrolling.</p>
+			<p>This is additional content to create scrolling.</p>
+			<p>This is additional content to create scrolling.</p>
+		    <p>This is additional content to create scrolling.</p>
+			<p>This is additional content to create scrolling.</p>
+			<p>This is additional content to create scrolling.</p>
+			<p>This is additional content to create scrolling.</p>
+			<p>This is additional content to create scrolling.</p>
+			<p>This is additional content to create scrolling.</p>            
+        </div>   
+    </div>
+        <button class="floating-button">+</button>
+        <footer>Footer Content</footer> 
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Position absolute</title>
+        <style>
+            .box{
+                position: relative;
+                background-color: #f2f2f2;
+                padding: 20px;
+                border: 1px solid #ccc;
+                top: 50px;
+                left: 50px;
+            }
+            .child-box{
+                position: absolute;
+                bottom: 0px;
+                left: 50px;
+                background-color: #ddd;
+                padding: 10px;
+                border: 1px solid #999;    
+            }
+            .child-box-2{
+                position: absolute;
+                bottom: 0px;
+                left: 100px;
+                background-color: #ddd;
+                padding: 10px;
+                border: 1px solid #999;               
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">         
+            <div class="box">
+                This is the parent box.
+                <div class="child-box">
+                    This is a child box with absolute positioning.
+                </div>
+                <div class="child-box-2">
+                    This is a child box with absolute positioning.
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
