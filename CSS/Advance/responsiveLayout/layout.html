@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+            .flex-container {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .item {
+                width: 200px;
+                height: 200px;
+            }
+
+            .red {
+                background-color: red;
+            }
+
+            .green {
+                background-color: green;
+            }
+
+            .blue {
+                background-color: blue;
+            }
+            .container {
+                background-color: #eee;
+                padding: 40px;
+                margin: 20px;
+            }
+
+            @media screen and (max-width: 768px) {
+                .flex-container {
+                    flex-direction: column;
+                }
+                .container {
+                    padding: 10px;
+                    margin: 10px;
+                }
+                .red{
+                    background-color: cyan;
+                }
+                .green{
+                    background-color: violet;
+                }
+                .blue{
+                    background-color: yellow;
+                }
+
+                h1{
+                    font-size: 50px;
+                }
+            }
+            @media screen and (max-width: 600px){
+                h1{
+                    font-size: 90px;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Heading: Your typography</h1>
+        <div class="flex-container">
+            <div class="item red">Item 1</div>
+            <div class="item green">Item 2</div>
+            <div class="item blue">Item 3</div>
+        </div>
+        <div class="container">
+            <p>Some text here</p>
+        </div>        
+    </body>
+</html>

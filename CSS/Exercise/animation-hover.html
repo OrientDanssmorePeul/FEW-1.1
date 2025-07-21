@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hover Animation</title>
+        <style>
+            .box{
+                background-color: lightgray;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                height: 500px;
+                width: 500px;
+            }
+            .hover1{
+                background-color: red;
+                position: absolute;
+                height: 100px;
+                width: 100px;
+                display: flex; 
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .hover1:hover{
+                animation-name: firstOne;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+                transition: 1s;
+            }             
+            @keyframes firstOne{ 
+                from{
+                    background-color: red;
+                }
+                to{
+                    background-color: green;
+                    box-shadow: 100px;
+                    width: 120px;
+                    height: 120px;                    
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="these">
+            <div class="box">
+                <div class="hover1">
+                    Hover Over Me
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
