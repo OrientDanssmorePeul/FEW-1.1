@@ -3,189 +3,32 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Responsive Product Showcase Website</title>
-        <style>
-            .headerAndnavigation {
-                background-color: rgb(61, 188, 231);
-                color: white;
-                width: 100vw;
-                height: 80px; /* give the header a fixed height */
-                display: flex;
-                justify-content: space-between; /* h4 on left, ul on right */
-                align-items: center; /* centers them vertically */
-                padding: 0 200px; /* optional horizontal padding */
-                box-sizing: border-box;
-            }
-            h4 {
-                margin: 0; /* remove default margin */
-            }
-            ul {
-                display: flex;
-                flex-direction: row; /* row by default */
-                gap: 20px;
-                list-style: none;
-                margin: 0;
-                padding: 0;
-            }
-            li{
-                list-style: none;
-            }
-            .heroSection{
-                background-image: url(data:image/jpeg;base64,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);
-                background-repeat: no-repeat;
-                background-position: center;
-                width: 100vw;
-                height: 400px;
-                background-size: cover;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                color: white;
-            }
-            button{
-                font-weight: bold;
-                color: aliceblue;
-                background-color: rgb(96, 236, 96); 
-                border: 0px; 
-                border-radius: 5px;
-                padding: 10px;
-            }
-            .productGridsection{
-                display: grid;
-                grid-template-columns: repeat(3, 320px);
-                grid-template-rows: repeat(2, 400px);
-                justify-content: center;
-                align-content: center;
-                grid-gap: 15px;
-            }
-            .cards{
-                border-radius: 5px;
-                background-image: linear-gradient(to bottom, rgb(162, 128, 240), lightblue);
-                overflow: hidden;
-            }
-            .cards h3, p, a{
-                margin-left: 8px;
-            }
-            .cards a{
-                padding: 8px 12px;
-                margin-left: 8px;
-                color: aliceblue;
-                background-color: rgb(70, 53, 53);
-                border-radius: 5px;
-                text-decoration: none;
-                font-weight: bold;
-                size: 50px;
-            }
-            .cards img{
-                height: 175px;
-                width: 320px;
-                object-fit: cover;
-            }
-            .testimonialSection{
-                display: grid;
-                grid-template-columns: repeat(3, 320px);
-                grid-template-rows: repeat(1, 200px);
-                justify-content: center;
-                grid-gap: 15px;
-                margin-bottom: 50px;              
-            }
-            .testimonialCard{
-                border-radius: 5px;
-                background-image: linear-gradient(to bottom, rgb(162, 128, 240), lightblue);
-                overflow: hidden;
-                padding: 10px;
-            }
-            .foOter{
-                background-color: rgb(61, 188, 231);
-                color: white;
-                width: 100vw;
-                height: auto;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center; 
-                margin: 0px;
-                height: 150px;
-            }
-            
-            @media screen and (max-width: 992px) and (min-width: 768px){
-                .headerAndnavigation {
-                    background-color: rgb(61, 188, 231);
-                    color: white;
-                    width: 100vw;
-                    height: 80px; /* give the header a fixed height */
-                    display: flex;
-                    justify-content: space-between; /* h4 on left, ul on right */
-                    align-items: center; /* centers them vertically */
-                    padding: 0 50px; /* optional horizontal padding */
-                    box-sizing: border-box;
-                }
-                .productGridsection{
-                    display: grid;
-                    grid-template-columns: repeat(2, 320px);
-                    grid-template-rows: repeat(3, 400px);
-                    justify-content: center;
-                    align-content: center;
-                    grid-gap: 15px;
-                }
-                .testimonialSection{
-                    display: grid;
-                    grid-template-columns: repeat(2, 320px);
-                    grid-template-rows: repeat(2, 200px);
-                    justify-content: center;
-                    grid-gap: 15px;
-                    margin-bottom: 50px;              
-                }
-            }
-            @media screen and (max-width: 767px){
-                .headerAndnavigation {
-                    background-color: rgb(61, 188, 231);
-                    color: white;
-                    width: 100vw;
-                    height: 80px; /* give the header a fixed height */
-                    display: flex;
-                    justify-content: space-between; /* h4 on left, ul on right */
-                    align-items: center; /* centers them vertically */
-                    padding: 0 25px; /* optional horizontal padding */
-                    box-sizing: border-box;
-                }
-                .productGridsection{
-                    display: grid;
-                    grid-template-columns: repeat(1, 320px);
-                    grid-template-rows: repeat(6, 400px);
-                    justify-content: center;
-                    align-content: center;
-                    grid-gap: 15px;
-                }
-                .testimonialSection{
-                    display: grid;
-                    grid-template-columns: repeat(1, 320px);
-                    grid-template-rows: repeat(3, 200px);
-                    justify-content: center;
-                    grid-gap: 15px;
-                    margin-bottom: 50px;              
-                }
-            }
-        </style>
+        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="hero.css">
+        <link rel="stylesheet" href="grid_section.css">
+        <link rel="stylesheet" href="testimonial.css">
+        <link rel="stylesheet" href="footer.css">
     </head>
-    <body style="margin: 0px; padding: 0px; background-color: lightgray; font-family: Arial, Helvetica, sans-serif;">
+    <body style="margin: 0px; padding: 0px; background-image: linear-gradient(to left, lightgray, rgb(113, 154, 154)); font-family: Arial, Helvetica, sans-serif;">
     <div class="headerAndnavigation">
         <h4>Tech Vision</h4>
         <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Products</li>
-            <li>Contact</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </div>
 
 
         <div class="heroSection">
-            <div class="heroDescp">
-                <h2>Discover Our Latest Products</h2>
-                <p>We are making your life easier.</p>
-                <button>Shop Now</button>
-            </div>
+            <div class="yes">
+                <div class="heroDescp">
+                    <h2>Discover Our Latest Products</h2>
+                    <p>We are making your life easier.</p>
+                    <button>Shop Now</button>
+                </div>
+            </div>   
         </div>
 
 

@@ -1,0 +1,12 @@
+            .foOter{
+                background-color: rgb(61, 188, 231);
+                color: white;
+                width: 100vw;
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center; 
+                margin: 0px;
+                height: 150px;
+            }

@@ -1,0 +1,55 @@
+            .headerAndnavigation {
+                background-color: rgb(61, 188, 231);
+                color: white;
+                width: 100vw;
+                height: 80px; /* give the header a fixed height */
+                display: flex;
+                justify-content: space-between; /* h4 on left, ul on right */
+                align-items: center; /* centers them vertically */
+                padding: 0 200px; /* optional horizontal padding */
+                box-sizing: border-box;
+            }
+            h4 {
+                margin: 0; /* remove default margin */
+            }
+            ul {
+                display: flex;
+                flex-direction: row; /* row by default */
+                gap: 20px;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            li{
+                list-style: none;
+            }
+            .headerAndnavigation a{
+                text-decoration: none;
+                color: white;
+            }
+            @media screen and (max-width: 992px) and (min-width: 768px){
+                .headerAndnavigation {
+                    background-color: rgb(61, 188, 231);
+                    color: white;
+                    width: 100vw;
+                    height: 80px; /* give the header a fixed height */
+                    display: flex;
+                    justify-content: space-between; /* h4 on left, ul on right */
+                    align-items: center; /* centers them vertically */
+                    padding: 0 50px; /* optional horizontal padding */
+                    box-sizing: border-box;
+                }
+            }
+            @media screen and (max-width: 767px){
+                .headerAndnavigation {
+                    background-color: rgb(61, 188, 231);
+                    color: white;
+                    width: 100vw;
+                    height: 80px; /* give the header a fixed height */
+                    display: flex;
+                    justify-content: space-between; /* h4 on left, ul on right */
+                    align-items: center; /* centers them vertically */
+                    padding: 0 25px; /* optional horizontal padding */
+                    box-sizing: border-box;
+                }
+            }
