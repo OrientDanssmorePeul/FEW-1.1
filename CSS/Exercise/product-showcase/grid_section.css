@@ -7,9 +7,13 @@
                 grid-gap: 15px;
             }
             .cards{
+                width: 320px;
+                height: 400px;
+                object-fit: cover;
                 border-radius: 5px;
                 background-image: linear-gradient(to bottom, rgb(162, 128, 240), lightblue);
                 overflow: hidden;
+                transition: 0.5s;
             }
             .cards h3, p, a{
                 margin-left: 8px;
@@ -28,6 +32,9 @@
                 height: 175px;
                 width: 320px;
                 object-fit: cover;
+            }
+            .cards:hover{
+                transform: scale(1.05);
             }
             @media screen and (max-width: 992px) and (min-width: 768px){
                 .productGridsection{
